@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt
+name: 名称: 编译 OpenWrt
 
 on:
   repository_dispatch:
@@ -18,22 +18,20 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-# 定时触发开启开始编译(把下面两个#去掉开启,时间设置请看定时开启编译说明)
- schedule:
-    - cron: 0 00 * * 6
+
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: immortalwrt-24.10.4
-  FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part2.sh
+  REPO_URL:   REPO_URL: https://github.com/immortalwrt/immortalwrt://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH:   REPO_BRANCH: 不朽之笔-24.10.4
+  FEEDS_CONF:   FEEDS_CONF: feeds.conf.default
+  CONFIG_FILE:   配置文件: .config
+  DIY_P1_SH:   DIY_P1_SH: diy-part1.sh
+  DIY_P2_SH:   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
-  TZ: Asia/Shanghai
+  TZ:   时区：亚洲/上海
 
 jobs:
   build:
