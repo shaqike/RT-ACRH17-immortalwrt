@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 名称: 编译 OpenWrt
+name: 名称: 编译 OpenWrt: 编译 OpenWrt
 
 on:
   repository_dispatch:
@@ -20,18 +20,19 @@ on:
         default: 'false'
 
 env:
-  REPO_URL:   REPO_URL: https://github.com/immortalwrt/immortalwrt://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH:   REPO_BRANCH: 不朽之笔-24.10.4
-  FEEDS_CONF:   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE:   配置文件: .config
-  DIY_P1_SH:   DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH:   DIY_P2_SH: diy-part2.sh
+  REPO_URL:     REPO_URL:   REPO_URL: https://github.com/immortalwrt/immortalwrt://github.com/immortalwrt/immortalwrt: https://github.com/immortalwrt/immortalwrt://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH:     REPO_BRANCH:  
+REPO_BRANCH: 不朽之笔-24.10.4: 不朽之笔-24.10.4
+  FEEDS_CONF:     FEEDS_CONF:   FEEDS_CONF: feeds.conf.default: feeds.conf.default
+  CONFIG_FILE:     配置文件: .config: .config
+  DIY_P1_SH:     DIY_P1_SH:   DIY_P1_SH:   自行安装的第一部分脚本: diy-part1.sh
+  DIY_P2_SH:     DIY_P2_SH:   DIY_P2_SH: diy-part2.sh: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
-  TZ:   时区：亚洲/上海
+  TZ:     TZ: 时区：亚洲/上海
 
 jobs:
   build:
