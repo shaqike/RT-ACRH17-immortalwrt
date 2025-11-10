@@ -23,3 +23,6 @@
 # echo 'start modify aliyundrive-webdav Makefile'
 # sed -i 's/stripped/release/g' feeds/packages/multimedia/aliyundrive-webdav/Makefile
 # echo 'modify aliyundrive-webdav Makefile OK'
+sudo apt install libfuse-dev
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
