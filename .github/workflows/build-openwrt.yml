@@ -205,22 +205,12 @@ jobs:
         echo "url=$(cat wetransfer.log | grep https | cut -f3 -d" ")" >>$GITHUB_OUTPUT
 
     - name: Generate release tag
-     id: tag
-       id: tag
-       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-       run: |
-       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M-acrh17")" >> $GITHUB_OUTPUT
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >>$GITHUB_OUTPUT
-         touch release.txt
-         touch release.txt
-        echo "acrh17" >> release.txt
-        [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
+      id: tag
+      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      run: |
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M-acrh17")" >> $GITHUB_OUTPUT touch release.txt
         echo "后台：192.168.5.1" >> release.txt
-        [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "账号：root" >> release.txt
-        echo "status=success" >>$GITHUB_OUTPUT
         echo "密码：无" >> release.txt
         echo "默认主题：Argon" >> release.txt
         echo "集成插件：aria2 openlist2 diskman lucky ksmb hd-idle autoreboot mtwifi-cfg " >> release.txt
